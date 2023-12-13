@@ -6,9 +6,8 @@ pipeline {
       stage('git checkout'){
 
         steps {
-            
-            git branch: 'main', url: 'https://github.com/anilkegarla/myrepo1.gi
 
+            git credentialsId: 'jenkins-git', url: 'https://github.com/anilkegarla/myrepo1.git'
         }
       }
 
