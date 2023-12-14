@@ -3,16 +3,20 @@ pipeline {
 
    stages{
 
-      stage('git checkout'){
+      stage('code clone'){
 
         steps {
 
            script{
-git branch: '*/main', credentialsId: 'jenkins-git', url: 'https://github.com/anilkegarla/myrepo1.git'
+git branch: 'main', credentialsId: 'git', url: 'https://github.com/anilkegarla/myrepo1.git'
            } 
         }
       }
-
+stage(maven build){
+  steps{
+   sh  "mvn clean install"
+  }
+}
 
     }
 }
