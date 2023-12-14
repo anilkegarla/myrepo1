@@ -12,11 +12,11 @@ git branch: 'main', credentialsId: 'git', url: 'https://github.com/anilkegarla/m
            } 
         }
       }
-stage('maven build'){
+     stage('maven build'){
 
-  steps{
+       steps{
 
-   sh  'mvn clean install'
+         sh  'mvn package'
 
   }
 }
