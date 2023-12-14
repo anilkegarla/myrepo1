@@ -1,3 +1,4 @@
+@Library('jenkis_shared_library')
 pipeline {
     agent any
 
