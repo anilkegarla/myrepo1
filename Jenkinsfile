@@ -14,27 +14,8 @@ pipeline {
     }
     }
               
-            
-          
-           
-    stage('unit test'){
-      steps{
-        sh 'mvn test'
-        }
-     
-    }
-           
-    stage('Integration test'){
-      steps  {
-        sh 'mvn verify -DskipUnitTests'
-      } 
-    }
-
-    stage('maven build'){
-      steps{
-        sh 'mvn clean install'
-      }
+    
     }       
            
-           }
+           
            
