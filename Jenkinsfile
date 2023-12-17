@@ -9,9 +9,10 @@ pipeline {
         steps {
 
            script{
-git branch: 'main', credentialsId: 'git', url: 'https://github.com/anilkegarla/myrepo1.git'
-           } 
-        }
+              git branch: 'main', 
+              credentialsId: 'git', url: 'https://github.com/anilkegarla/myrepo1.git'
+              } 
+         }
       }
      stage('maven build'){
 
@@ -20,7 +21,13 @@ git branch: 'main', credentialsId: 'git', url: 'https://github.com/anilkegarla/m
          sh  'mvn package'
 
   }
-}
+}  
+     stage('maven test'){
+
+     steps{
+      sh ''mvn test
+     }
+     }
 
     }
 }
