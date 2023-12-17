@@ -4,9 +4,9 @@ pipeline {
 
    stages{
 
-      stage('code clone'){
+    stage('code clone'){
 
-        steps {
+       steps {
 
            script{
               git branch: 'main', 
@@ -14,25 +14,23 @@ pipeline {
               } 
          }
       }
-     stage('maven build'){
+    
+     
+     }
+    stage('maven integration test'){
+
+      steps{
+       sh 'mvn verify -DskipUnitTest'
+     }
+     }
+     
+    stage('maven build'){
 
        steps{
 
          sh  'mvn package'
 
   }
-}  
-     stage('maven test'){
-
-     steps{
-      sh 'mvn test'
-     }
-     }
-     stage('maven integration test'){
-
-     steps{
-      sh 'mvn verify -DskipUnitTest'
-     }
-     }     
+}       
     }
 }
