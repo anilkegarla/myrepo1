@@ -8,7 +8,7 @@ pipeline {
             steps {
             vcCheckout(
                 branch: "main",
-                url: "https://github.com/nclouds/jenkins_shared_library"
+                url: "https://github.com/https://github.com/anilkegarla/myrepo1.git"
             )
             }
     }
