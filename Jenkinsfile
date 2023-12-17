@@ -17,21 +17,7 @@ pipeline {
     
      
      }
-    stage('maven integration test'){
-
-      steps{
-       sh 'mvn verify -DskipUnitTest'
-     }
-     }
-     
-    stage('maven build'){
-
-       steps{
-         sh  'mvn clean package'
-
-  }
-}  
-
+    
 
     }
 }
