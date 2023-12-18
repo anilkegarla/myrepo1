@@ -1,16 +1,13 @@
 
 pipeline {
-    agent any
+    
+       agent any
 
    stages{
 
       stage('Git Checkout') {
-            steps {
-            gitCheckout(
-                branch: "main",
-                url: "https://github.com/https://github.com/anilkegarla/myrepo1.git"
-            )
-            }
+        git branch: 'main', url: 'https://github.com/anilkegarla/myrepo1.git'
+            
     }
     }
               
