@@ -9,10 +9,6 @@ pipeline {
 
       stage('gitCheckout') {
 
-       steps{
- git branch: 'main', url: 'https://github.com/anilkegarla/myrepo1.git'
-       } 
-       
             
     }
  }
