@@ -15,8 +15,14 @@ pipeline {
          }
 
       }
-      
-            
+      stage ('maven build'){
+
+         steps {
+            mvnBuild()
+        }
+      }
+
+
     }
  }
               
