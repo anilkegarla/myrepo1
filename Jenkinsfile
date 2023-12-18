@@ -19,7 +19,7 @@ pipeline {
 
          steps {
 
-            mvnBuild()
+            mavenBuild()
         }
       }
 
