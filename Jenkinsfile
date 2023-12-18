@@ -7,7 +7,7 @@ pipeline {
 
    stages{
       
-      stage('gitcheckout'){
+      stage("gitcheckout"){
          
           steps{
            git branch: 'main', url: 'https://github.com/anilkegarla/myrepo1.git'
@@ -18,6 +18,7 @@ pipeline {
       stage ('maven build'){
 
          steps {
+
             mvnBuild()
         }
       }
