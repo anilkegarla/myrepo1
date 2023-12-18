@@ -7,14 +7,7 @@ pipeline {
 
    stages{
 
-      stage('Git Checkout') {
-            steps {
-            vcCheckout(
-                branch: "main",
-                url: "https://github.com/anilkegarla/myrepo1.git"
-            )
-            }
-    }
+      
             
     }
  }
