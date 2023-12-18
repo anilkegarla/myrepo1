@@ -1,4 +1,4 @@
-@Library('jenkins_shared_library')_
+
 pipeline {
     agent any
 
@@ -6,7 +6,7 @@ pipeline {
 
       stage('Git Checkout') {
             steps {
-            vcCheckout(
+            gitCheckout(
                 branch: "main",
                 url: "https://github.com/https://github.com/anilkegarla/myrepo1.git"
             )
